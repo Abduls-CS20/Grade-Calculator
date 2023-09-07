@@ -18,7 +18,7 @@ function btnClicked() {
     let output = document.getElementById("output");
     let letterOutput = document.getElementById("letter output")
 
-
+    //proccess
     letter1.innerHTML = getGrade(in1)
     letter2.innerHTML = getGrade(in2)
     letter3.innerHTML = getGrade(in3)
@@ -27,6 +27,7 @@ function btnClicked() {
 
     let average = (in1 + in2 + in3 + in4 + in5)/5;
 
+    //output
     letterOutput.innerHTML = getGrade(average)
     output.innerHTML = Math.round(average);
 
@@ -35,17 +36,15 @@ function btnClicked() {
 }
 
 function getGrade(num){
-    let grade = " "
-
     if (num >= 90)
-        grade = "A"
+        return "A"
     else if (num >= 75)
-        grade = "B"
+        return "B"
     else if (num >= 60)
-        grade = "C"
+        return "C"
     else if (num >= 50)
-        grade = "D"
+        return "D"
     else
-        grade = "F"
-    return grade
+        return "F"
+    
 }
